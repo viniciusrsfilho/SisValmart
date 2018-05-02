@@ -1,0 +1,58 @@
+p, label {
+    font-size: 110%;
+    font-weight: 500;
+}
+
+form {
+    margin-top: 5%;
+    width: 50%;
+    height: 15vh;
+}
+
+#select {
+    margin-left: 30%;
+}
+
+#excluir {
+    margin-left: 23%;
+}
+
+select {
+    width: 70%;
+}
+
+button {
+    margin-top: 2%;
+    margin-left: 28%;
+}
+
+input {
+    width: 25%;
+}
+
+#tabela {
+    padding-top: 4%;
+    margin-left: 20%;
+}
+
+#ptab {
+    font-weight: 900;
+    font-size: 150%;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #17a2b8;
+    color: white;
+}
+
+td, th {
+    padding: 20px;
+}
+
+.del {
+    padding-right: 60px;
+} 

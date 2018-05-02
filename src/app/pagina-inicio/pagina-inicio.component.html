@@ -1,0 +1,21 @@
+<img id="img-princ" src="../../assets/fundo.jpg" alt="">
+<h3>Seja bem-vindo {{logado.nome}}</h3>
+
+<div id="div1">
+    <p>Gerenciamento de estoque:</p>
+    <button id="bt" routerLink="/produto" type="button" class="btn btn-success">Cadastrar produto</button>
+    <button id="bt" routerLink="/selecionar" type="button" class="btn btn-success">Descrever produto</button>
+    <button id="bt" routerLink="/estoque" type="button" class="btn btn-success">Estoque</button>
+    <button id="bt" routerLink="/adicionar" type="button" class="btn btn-success">Adicionar quantidade do produto</button>
+</div>
+
+<div id="div1" *ngIf="eGerente">
+    <p>Gerenciamento de pessoa:</p>
+    <button id="bt" (click)="cadastrarFuncionario()" type="button" class="btn btn-success">Cadastrar funcionário</button>
+    <button id="bt" (click)="cadastrarGerente()" type="button" class="btn btn-success">Cadastrar gerente</button>
+    <button id="bt" routerLink="/excluir" type="button" class="btn btn-success">Excluir produto</button>
+</div>
+
+<div id="div1">
+    <button (click)="logout()" type="button" class="btn btn-danger">Sair</button>
+</div>

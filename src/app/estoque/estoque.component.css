@@ -1,0 +1,27 @@
+p {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 130%;
+}
+
+#tabela {
+    padding-top: 4%;
+    margin-left: 20%;
+}
+
+#ptab {
+    font-weight: 900;
+    font-size: 150%;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #17a2b8;
+    color: white;
+}
+
+td, th {
+    padding: 20px;
+}

@@ -1,0 +1,32 @@
+#img-princ{
+    position: absolute;
+    width: 100%;
+    height: 92vh;
+}
+
+div {
+    position: relative;
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    margin-top: 2%;
+}
+
+p {
+    font-size: 110%;
+    font-weight: 500;
+}
+
+#div1 {
+    margin-top: 3%;
+    width: 100%;
+    height: 15vh;
+    margin-left: 15%;
+}
+
+#bt {
+    margin-right: 2%;
+    padding: 1.5%;
+}

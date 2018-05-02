@@ -1,0 +1,24 @@
+<img id="img-princ" src="../../assets/valmart.jpg" alt="">
+<form id="login">
+  
+      <div>
+        <img id="img-login" src="../../assets/user.png" alt="">
+      </div>
+  
+      <div>
+        <label for="uname">LOGIN</label>
+      </div>
+  
+      <div class="div-login">
+        <input type="text" name="uname" placeholder="  CPF" required [(ngModel)]="user">
+      </div>
+  
+      <div class="div-login">
+        <input type="password" name="upswd" placeholder="  Senha" required [(ngModel)]="senha">
+      </div>
+  
+      <button (click)="onSubmit()" id="bt-login" type="button" class="btn btn-info">Entrar</button>
+  
+</form>
+    
+

@@ -1,0 +1,21 @@
+<div id="tabela">
+  <p id="ptab">Estoque:</p>
+  <table>
+    <tr>
+      <th>Produto</th>
+      <th>Preço de Custo</th>
+      <th>Preço de Venda</th>
+      <th>Categoria</th>
+      <th>Descrição</th>
+      <th>Quantidade</th>
+    </tr>
+    <tr *ngFor="let produto of estoque.produtos">
+      <td>{{produto.nome}}</td>
+      <td>{{produto.precoInicial}}</td>
+      <td>{{produto.precoFinal}}</td>
+      <td>{{produto.categoria}}</td>
+      <td>{{produto.descricao}}</td>
+      <td>{{produto.quantidade}}</td>
+    </tr>
+  </table>
+</div>
