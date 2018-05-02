@@ -1,0 +1,27 @@
+form {
+    margin-left: 28%;
+    margin-top: 4%;
+}
+
+h3 {
+    margin-left: 18%;
+}
+
+div {
+    margin-top: 2%;
+}
+
+input {
+    width: 60%;
+}
+
+select {
+    width: 60%;
+    height: 5vh;
+}
+
+button {
+    font-size: 110%;
+    margin-top: 2%;
+    margin-left: 27%;
+}

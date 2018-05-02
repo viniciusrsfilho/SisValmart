@@ -1,0 +1,43 @@
+<form *ngIf="eFuncionario" #form="ngForm" (ngSubmit)="onSubmitFuncionario(form)">
+
+    <h3>Cadastro de funcionário</h3>
+
+    <div class="form-group">
+      <label for="nomef">Nome</label>
+      <input type="email" class="form-control" id="nomef" name="nomef" 
+      [(ngModel)]="funcionario.nome">
+    </div>
+    <div class="form-group">
+      <label for="cpff">CPF</label>
+      <input type="text" class="form-control" id="cpff" name="cpff" [(ngModel)]="funcionario.cpf">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1f">Senha</label>
+      <input type="password" class="form-control" id="exampleInputPassword1f" name="senhaf" [(ngModel)]="funcionario.senha">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+</form>
+
+<form *ngIf="eGerente" #form2="ngForm" (ngSubmit)="onSubmitGerente(form)">
+
+    <h3>Cadastro de gerente</h3>
+
+    <div class="form-group">
+      <label for="nomeg">Nome</label>
+      <input type="email" class="form-control" id="nomeg" name="nomeg" 
+      [(ngModel)]="gerente.nome">
+    </div>
+    <div class="form-group">
+      <label for="cpfg">CPF</label>
+      <input type="text" class="form-control" id="cpfg" name="cpfg" [(ngModel)]="gerente.cpf">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1g">Senha</label>
+      <input type="password" class="form-control" id="exampleInputPassword1g" name="senhag" [(ngModel)]="gerente.senha">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+</form>

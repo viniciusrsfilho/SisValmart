@@ -1,0 +1,24 @@
+p, label {
+    font-size: 110%;
+    font-weight: 500;
+}
+
+form {
+    margin-top: 5%;
+    width: 50%;
+    height: 15vh;
+    margin-left: 30%;
+}
+
+select {
+    width: 70%;
+}
+
+input {
+    width: 70%;
+}
+
+button {
+    margin-top: 2%;
+    margin-left: 28%;
+}

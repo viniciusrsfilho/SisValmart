@@ -1,0 +1,46 @@
+#login {
+    position: absolute;
+    right: 33%;
+    width: 35%;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: .5px .5px .5px .5px;
+    margin-top: 12%;
+}
+
+input {
+    width: 52%;
+    height: 40px;
+    background: #e9ebe9;
+    border: none;
+}
+
+.div-login {
+    margin-top: 1%;
+    font-weight: 10;
+}
+
+#img-princ{
+    position: absolute;
+    width: 100%;
+    height: 92vh;
+}
+
+#bt-login {
+    position: relative;
+    right: 1;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 52%;
+    height: 40px;
+}
+
+#img-login {
+    margin-top: -13%;
+    width: 25%;
+}
+
+label {
+    margin-top: 2%;
+    font-size: 200%;
+}
