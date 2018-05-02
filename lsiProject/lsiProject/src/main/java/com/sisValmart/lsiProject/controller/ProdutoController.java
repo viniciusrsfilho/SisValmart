@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sisValmart.lsiProject.entities.Produto;
+import com.sisValmart.lsiProject.exceptions.InvalidProductException;
 import com.sisValmart.lsiProject.service.ProdutoService;
 
 @RestController
@@ -22,7 +23,7 @@ public class ProdutoController {
 	ProdutoService produtoService;
 	
 	@PostMapping
-	public ResponseEntity<Produto> addProduto(@Valid @RequestBody Produto produto) {
+	public ResponseEntity<Produto> addProduto(@Valid @RequestBody Produto produto) throws InvalidProductException {
 		return new ResponseEntity<Produto>(produtoService.addProduto(produto), HttpStatus.OK);
 	}
 	
