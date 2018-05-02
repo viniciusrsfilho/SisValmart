@@ -8,6 +8,7 @@ import com.sisValmart.lsiProject.entities.Produto;
 import com.sisValmart.lsiProject.exceptions.InvalidProductException;
 import com.sisValmart.lsiProject.interfaces.IProdutoService;
 import com.sisValmart.lsiProject.repository.RepositorioProduto;
+import com.sisValmart.lsiProject.utils.CalculadoraDePreco;
 
 public class ProdutoService implements IProdutoService {
 
@@ -16,6 +17,7 @@ public class ProdutoService implements IProdutoService {
 	
 	@Override
 	public Produto addProduto(Produto produto) throws InvalidProductException {
+		produto.setPrecoFinal(CalculadoraDePreco.calculaValor(produto));
 		return repositorioProduto.save(produto);
 	}
 
