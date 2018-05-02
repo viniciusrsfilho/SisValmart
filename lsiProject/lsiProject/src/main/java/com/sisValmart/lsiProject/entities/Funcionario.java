@@ -11,22 +11,26 @@ public class Funcionario {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
-	@Column(name="nome")
+
+	@Column(name = "nome")
 	private String nome;
-	
-	@Column(name="cpf")
+
+	@Column(name = "cpf")
 	private String cpf;
-	
-	@Column(name="senha")
+
+	@Column(name = "senha")
 	private String senha;
-	
+
 	public Funcionario(String nome, String cpf, String senha) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.senha = senha;
 	}
-	
+
+	public Funcionario() {
+		super();
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -57,6 +61,6 @@ public class Funcionario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}	
-	
+	}
+
 }
