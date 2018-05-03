@@ -5,6 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Classe Gerente define as caracteristicas de um Produto.
+ * @author Equipe SISValmart
+ */
 @Entity
 public class Produto {
 
@@ -29,14 +33,21 @@ public class Produto {
 
 	@Column(name = "quantidade")
 	private int quantidade;
-
+/**
+* Construtor sobrecarregado da classe Produto.
+* @param nome o nome do Produto.
+* @param cpf o cpf do Produto.
+* @param senha a senha do Produto.
+*/
 	public Produto(String nome, double precoInicial, String categoria, int quantidade) {
 		this.nome = nome;
 		this.precoInicial = precoInicial;
 		Categoria = categoria;
 		this.quantidade = quantidade;
 	}
-
+/**
+ * Construtor default da classe Produto.
+*/
 	public Produto() {
 		super();
 	}

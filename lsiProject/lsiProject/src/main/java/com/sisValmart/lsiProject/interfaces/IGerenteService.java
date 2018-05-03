@@ -4,7 +4,10 @@ import java.util.List;
 
 import com.sisValmart.lsiProject.entities.Gerente;
 import com.sisValmart.lsiProject.exceptions.AbsentObjectExecption;
-
+/**
+ * Interface IGerenteService tem metodos CRUD para serem implementados.
+ * @author Equipe SISValmart
+ */
 public interface IGerenteService {
 
 	List<Gerente> getAllGerentes();
