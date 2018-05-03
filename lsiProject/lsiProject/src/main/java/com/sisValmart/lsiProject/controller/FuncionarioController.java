@@ -1,4 +1,9 @@
+/*
+ * No pacote com.sisValmart.lsiProject.controller esta criada a classe FuncionarioController
+ * 
+ */
 package com.sisValmart.lsiProject.controller;
+
 
 import java.util.List;
 
@@ -15,26 +20,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sisValmart.lsiProject.entities.Funcionario;
 import com.sisValmart.lsiProject.service.FuncionarioService;
-
 /**
- * Classe FuncionarioController faz a intermidiacao da classe Funcionario e a Classe FuncionarioService.
- * @author Equipe SISValmart
+ * No pacote com.sisValmart.lsiProject.controller criamos uma classe FuncionarioController
+ * que é responsavel para receber e tratar requisições vindas da classe Funcionario
+ * 
+ * @author vinicius; sezinando; rodrigo; diego
+ *
  */
+
 @RestController
 public class FuncionarioController {
 	
 	@Autowired
 	FuncionarioService funcionarioService;
-/**
- * @param ResponseEntity<Funcionario> retorna um novo Funcionario adicionado.
- */
+	
 	@PostMapping
 	public ResponseEntity<Funcionario> addFuncionario(@Valid @RequestBody Funcionario funcionario) {
 		return new ResponseEntity<Funcionario>(funcionarioService.addFuncionario(funcionario), HttpStatus.OK); 
 	}
-/**
- * @param ResponseEntity<List<Funcionario>> retorna uma lista de Funcionarios.
- */
+	
 	@RequestMapping(value="/funcionario", method=RequestMethod.GET)
 	public ResponseEntity<List<Funcionario>> getFuncionarios() {
 		List<Funcionario> funcionarios = funcionarioService.getAllFuncionarios();

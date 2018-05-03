@@ -1,8 +1,15 @@
+/*
+ * No pacote com.sisValmart.lsiProject.entities esta criada a classe AbsentObjectExecption
+ * que extends Exception
+ *
+ */
 package com.sisValmart.lsiProject.exceptions;
 
-/**
- * Classe AbsentObjectExecption e uma classe excecao.
- * @author Equipe SISValmar
+/**A Classe AbsentObjectExecption criada e tem como objetivo de lançar uma exceção quando um objeto
+ * não será encontrado na hora da busca 
+ *  
+ * @author vinicius; sezinando; rodrigo; diego
+ *
  */
 public class AbsentObjectExecption extends Exception{
 
