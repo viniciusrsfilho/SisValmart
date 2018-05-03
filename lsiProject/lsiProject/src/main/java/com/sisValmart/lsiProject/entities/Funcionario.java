@@ -5,6 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Classe Funcionario define as caracteristicas de um Funcionario.
+ * @author Equipe SISValmart
+ */
 @Entity
 public class Funcionario {
 
@@ -20,13 +24,20 @@ public class Funcionario {
 
 	@Column(name = "senha")
 	private String senha;
-
+/**
+ * Construtor sobrecarregado da classe Funcionario.
+ * @param nome o nome do Funcionario.
+ * @param cpf o cpf do Funcionario.
+ * @param senha a senha do Funcionario.
+*/
 	public Funcionario(String nome, String cpf, String senha) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.senha = senha;
 	}
-
+/**
+ * Construtor default da classe Funcionario.
+ */
 	public Funcionario() {
 		super();
 	}

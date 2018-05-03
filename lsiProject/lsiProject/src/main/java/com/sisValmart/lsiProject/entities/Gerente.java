@@ -5,6 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Column;
 
+/**
+ * Classe Gerente define as caracteristicas de um Funcionario.
+ * @author Equipe SISValmart
+ */
 @Entity
 public class Gerente {
 
@@ -20,14 +24,21 @@ public class Gerente {
 
 	@Column(name = "senha")
 	private String senha;
-
+/**
+* Construtor sobrecarregado da classe Gerente.
+ * @param nome o nome do Gerente.
+ * @param cpf o cpf do Gerente.
+ * @param senha a senha do Gerente.
+*/
 	public Gerente(String nome, String cpf, String senha) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.senha = senha;
 	}
-
+/**
+ * Construtor default da classe Gerente.
+*/
 	public Gerente() {
 		super();
 	}

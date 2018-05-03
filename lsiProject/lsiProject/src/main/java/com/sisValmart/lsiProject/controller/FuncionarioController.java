@@ -16,17 +16,25 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sisValmart.lsiProject.entities.Funcionario;
 import com.sisValmart.lsiProject.service.FuncionarioService;
 
+/**
+ * Classe FuncionarioController faz a intermidiacao da classe Funcionario e a Classe FuncionarioService.
+ * @author Equipe SISValmart
+ */
 @RestController
 public class FuncionarioController {
 	
 	@Autowired
 	FuncionarioService funcionarioService;
-	
+/**
+ * @param ResponseEntity<Funcionario> retorna um novo Funcionario adicionado.
+ */
 	@PostMapping
 	public ResponseEntity<Funcionario> addFuncionario(@Valid @RequestBody Funcionario funcionario) {
 		return new ResponseEntity<Funcionario>(funcionarioService.addFuncionario(funcionario), HttpStatus.OK); 
 	}
-	
+/**
+ * @param ResponseEntity<List<Funcionario>> retorna uma lista de Funcionarios.
+ */
 	@RequestMapping(value="/funcionario", method=RequestMethod.GET)
 	public ResponseEntity<List<Funcionario>> getFuncionarios() {
 		List<Funcionario> funcionarios = funcionarioService.getAllFuncionarios();
