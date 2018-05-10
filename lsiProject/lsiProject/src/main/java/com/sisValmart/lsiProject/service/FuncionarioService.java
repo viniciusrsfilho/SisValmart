@@ -3,6 +3,8 @@ package com.sisValmart.lsiProject.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import com.sisValmart.lsiProject.entities.Funcionario;
 import com.sisValmart.lsiProject.interfaces.IFuncionarioService;
@@ -11,6 +13,8 @@ import com.sisValmart.lsiProject.repository.RepositorioFuncionario;
  * Classe FuncionarioService implementa os metodos da classe IFuncionarioService.
  * @author Equipe SISValmart
  */
+@Service
+@Validated
 public class FuncionarioService implements IFuncionarioService {
 	
 	@Autowired

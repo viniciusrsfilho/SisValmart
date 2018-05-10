@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,8 @@ import com.sisValmart.lsiProject.service.ProdutoService;
  * Classe ProdutoController faz a intermidiacao da classe Produto e a Classe ProdutoService.
  * @author Equipe SISValmart
  */
-@RestController
+@Component
+@RequestMapping("/produtos")
 public class ProdutoController {
 	
 	@Autowired
