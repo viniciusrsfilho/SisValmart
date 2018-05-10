@@ -17,26 +17,19 @@ import com.sisValmart.lsiProject.entities.Gerente;
 import com.sisValmart.lsiProject.exceptions.AbsentObjectExecption;
 import com.sisValmart.lsiProject.service.GerenteService;
 
-/**
- * Classe GerenteController faz a intermidiacao da classe Gerente e a Classe GerenteService.
- * @author Equipe SISValmart
- */
 @Controller
 @RequestMapping("/gerentes")
+
 public class GerenteController {
 
 	@Autowired
 	private GerenteService gService;
-/**
-* @param ResponseEntity<Gerente> retorna um novo Gerente adicionado.
-*/	
+	
 	@PostMapping
 	public ResponseEntity<Gerente> addGerente(@Valid @RequestBody Gerente gerente) throws AbsentObjectExecption{
 		return new ResponseEntity<Gerente>(gService.addGerente(gerente), HttpStatus.OK);
 	}
-/**
-* @param ResponseEntity<List<Gerente>> retorna uma lista de Gerente.
-*/	
+	
 	@GetMapping
 	public ResponseEntity<List<Gerente>> getGerentes() {
 		List<Gerente> gerentes = gService.getAllGerentes();

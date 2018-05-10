@@ -6,43 +6,46 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 
 /**
- * Classe Gerente define as caracteristicas de um Funcionario.
- * @author Equipe SISValmart
+ * 
+ * @author Sezinando Vieira, Vinicius Filho, Rodrigo Trindade, Diego Kazadi
+ * 
+ * Entidade gerente. Classe que é responsavel por adicionar e remover produtos do sistema, 
+ * assim como pode fazer essas mesmas atividades com a entidade funcionário.
+ *
+ *
  */
 @Entity
 public class Gerente {
+	/**
+	 * Aqui estão sendo geradas as colunas no bando de dados representando todas as 
+	 * caracteristicas que a entidade Gerente possui.
+	 * 
+	 */
 
 	@Id
 	@GeneratedValue
 	private Long id;
-
-	@Column(name = "nome")
+	
+	@Column(name="nome")
 	private String nome;
-
-	@Column(name = "cpf")
+	
+	@Column(name="cpf")
 	private String cpf;
-
-	@Column(name = "senha")
+	
+	@Column(name="senha")
 	private String senha;
-/**
-* Construtor sobrecarregado da classe Gerente.
- * @param nome o nome do Gerente.
- * @param cpf o cpf do Gerente.
- * @param senha a senha do Gerente.
-*/
+
 	public Gerente(String nome, String cpf, String senha) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.senha = senha;
 	}
-/**
- * Construtor default da classe Gerente.
-*/
-	public Gerente() {
-		super();
-	}
 
+	/**
+	 * 
+	 * @return o id do Gerente
+	 */
 	public long getId() {
 		return id;
 	}
@@ -74,5 +77,8 @@ public class Gerente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
+	
+	
+	
+	
 }
