@@ -1,5 +1,4 @@
 package com.sisValmart.lsiProject.entities;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,32 +10,30 @@ public class Produto {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(name="nome")
 	private String nome;
 	
-	@Column(name="precoInicial")
 	private double precoInicial;
 	
-	@Column(name="precoFinal")
 	private double precoFinal;
 	
-	@Column(name="categoria")
-	private String Categoria;
+	private int quantidade;
 	
-	@Column(name="descricao")
+	private String categoria;
+	
 	private String descricao;
 
-	public Produto(String nome, double precoInicial, String categoria) {
+	public Produto(String nome, double precoInicial, int quantidade, String categoria) {
 		this.nome = nome;
 		this.precoInicial = precoInicial;
-		Categoria = categoria;
+		this.quantidade = quantidade;
+		this.categoria = categoria;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -64,12 +61,20 @@ public class Produto {
 		this.precoFinal = precoFinal;
 	}
 
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	public String getCategoria() {
-		return Categoria;
+		return categoria;
 	}
 
 	public void setCategoria(String categoria) {
-		Categoria = categoria;
+		this.categoria = categoria;
 	}
 
 	public String getDescricao() {

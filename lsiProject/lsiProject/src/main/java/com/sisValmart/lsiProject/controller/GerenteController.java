@@ -18,8 +18,7 @@ import com.sisValmart.lsiProject.exceptions.AbsentObjectExecption;
 import com.sisValmart.lsiProject.service.GerenteService;
 
 @Controller
-@RequestMapping("/gerentes")
-
+@RequestMapping("gerentes")
 public class GerenteController {
 
 	@Autowired

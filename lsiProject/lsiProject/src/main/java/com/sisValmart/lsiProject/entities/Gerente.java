@@ -3,7 +3,6 @@ package com.sisValmart.lsiProject.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Column;
 
 /**
  * 
@@ -26,13 +25,10 @@ public class Gerente {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(name="nome")
 	private String nome;
 	
-	@Column(name="cpf")
 	private String cpf;
 	
-	@Column(name="senha")
 	private String senha;
 
 	public Gerente(String nome, String cpf, String senha) {
