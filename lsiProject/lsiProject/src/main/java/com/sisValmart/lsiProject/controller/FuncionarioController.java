@@ -7,16 +7,17 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.sisValmart.lsiProject.entities.Funcionario;
 import com.sisValmart.lsiProject.service.FuncionarioService;
 
-@RestController
+@Controller
+@RequestMapping("funcionarios")
 public class FuncionarioController {
 	
 	@Autowired
@@ -27,7 +28,7 @@ public class FuncionarioController {
 		return new ResponseEntity<Funcionario>(funcionarioService.addFuncionario(funcionario), HttpStatus.OK); 
 	}
 	
-	@RequestMapping(value="/funcionario", method=RequestMethod.GET)
+	@GetMapping
 	public ResponseEntity<List<Funcionario>> getFuncionarios() {
 		List<Funcionario> funcionarios = funcionarioService.getAllFuncionarios();
 		return new ResponseEntity<List<Funcionario>>(funcionarios, HttpStatus.OK);

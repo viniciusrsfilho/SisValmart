@@ -1,6 +1,5 @@
 package com.sisValmart.lsiProject.entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,13 +19,10 @@ public class Funcionario {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(name="nome")
 	private String nome;
 	
-	@Column(name="cpf")
 	private String cpf;
 	
-	@Column(name="senha")
 	private String senha;
 	
 	public Funcionario(String nome, String cpf, String senha) {

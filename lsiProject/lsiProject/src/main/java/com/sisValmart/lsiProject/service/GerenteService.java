@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import com.sisValmart.lsiProject.entities.Gerente;
 import com.sisValmart.lsiProject.exceptions.AbsentObjectExecption;
@@ -12,7 +11,6 @@ import com.sisValmart.lsiProject.interfaces.IGerenteService;
 import com.sisValmart.lsiProject.repository.RepositorioGerente;
 
 @Service
-@Validated
 public class GerenteService implements IGerenteService {
 
 	@Autowired
