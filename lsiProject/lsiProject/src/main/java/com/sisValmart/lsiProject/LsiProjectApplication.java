@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- *Classe LsiProjectApplication tem o aplicativo do Sistema SISValmar
+ *Classe LsiProjectApplication possui o método main para iniciar a aplicação
  * @author Equipe SISValmart
  */
 @SpringBootApplication
