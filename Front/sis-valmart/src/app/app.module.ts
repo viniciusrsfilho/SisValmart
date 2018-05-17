@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -20,7 +20,6 @@ import { SelecionarProdutoComponent } from './selecionar-produto/selecionar-prod
 import { ExcluirProdutoComponent } from './excluir-produto/excluir-produto.component';
 import { EditarQuantidadeComponent } from './editar-quantidade/editar-quantidade.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +36,8 @@ import { EditarQuantidadeComponent } from './editar-quantidade/editar-quantidade
   imports: [
     BrowserModule,
     RouterModule.forRoot(route),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [CadastroService, ProdutoService, LoginService, NavbarComponent, AuthGuardService],
   bootstrap: [AppComponent]
