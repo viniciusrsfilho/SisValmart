@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Funcionario, Gerente } from '../models';
 import { CadastroService } from './cadastro.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,7 +14,7 @@ export class CadastroComponent implements OnInit {
   eFuncionario : boolean = false;
   eGerente : boolean = false
 
-  constructor(private cadastroService : CadastroService, private router : Router) {
+  constructor(private cadastroService : CadastroService) {
     this.eFuncionario = this.cadastroService.eFuncionario;
     this.eGerente = this.cadastroService.eGerente;
   }
@@ -26,17 +25,13 @@ export class CadastroComponent implements OnInit {
   onSubmitFuncionario(form) {
     this.cadastroService.addFuncionario(this.funcionario);
     this.funcionario = new Funcionario();
-    this.router.navigate(['./home']);
+    alert('Funcionário cadastrado com sucesso!');
   }
 
   onSubmitGerente(form) {
     this.cadastroService.addGerente(this.gerente);
     this.gerente = new Gerente();
-    this.router.navigate(['./home']);
+    alert('Gerente cadastrado com sucesso!')
   }
 
 }
-function newFunction() {
-  return this;
-}
-
