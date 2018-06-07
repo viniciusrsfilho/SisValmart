@@ -14,8 +14,7 @@ export class ProdutoService {
   }
 
   addProduto(prod) {
-    this.produtos.push(prod)
-    this.http.post(this.rota, prod).map(res => res).subscribe(dados => dados);
+    this.http.post(this.rota, prod).subscribe(dados => dados);
   }
 
 }
