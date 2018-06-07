@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../cadastro-produto/produto.service';
 import { Produto } from '..';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-selecionar-produto',
@@ -14,7 +15,9 @@ export class SelecionarProdutoComponent implements OnInit {
   descProd : string;
   produto : Produto = new Produto();
 
-  constructor(private produtoService : ProdutoService) {  }
+  rota : string = "http://localhost:8080/produtos";
+
+  constructor(private produtoService : ProdutoService, private http : Http) {  }
 
   ngOnInit() {
   }

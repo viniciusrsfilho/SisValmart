@@ -36,9 +36,4 @@ export class PaginaInicioComponent implements OnInit {
     this.router.navigate(['/cadastro']);
   }
 
-  logout() {
-    this.loginService.fezLogout();
-    this.router.navigate(['/home']);
-  }
-
 }
